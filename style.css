@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
+
+#NavBar {
+  font-family: "Montserrat", sans-serif;
+  width: 270px;
+  height: 795px;
+  left: 0px;
+  top: 1px;
+  background-color: #000000;
+}
+
+.bg-test {
+  color: white;
+  width: 100%;
+}
+
+.navbar-icon-square {
+  height: 24px;
+  width: 24px;
+  background-color: #b2b2b2;
+}
+
+#navbar-liked-songs {
+  background: linear-gradient(
+    135deg,
+    #4000f4 0%,
+    #603aed 22.48%,
+    #7c6ee6 46.93%,
+    #979fe1 65.71%,
+    #a2b3de 77.68%,
+    #adc8dc 88.93%,
+    #c0ecd7 100%
+  );
+  border-radius: 1px;
+}
+
+.navbar-selected {
+  height: 50px;
+  border-radius: 6px;
+}
+
+.navbar-selected:hover {
+  cursor: pointer;
+  background-color: #282828;
+  height: 50px;
+  border-radius: 6px;
+}
