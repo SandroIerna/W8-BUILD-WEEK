@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
 
-#NavBar {
+body {
+  color: white;
   font-family: "Montserrat", sans-serif;
+}
+
+#NavBar {
   width: 270px;
   height: 795px;
   left: 0px;
@@ -44,4 +48,49 @@
   background-color: #282828;
   height: 50px;
   border-radius: 6px;
+}
+
+#artist-page {
+  flex-grow: 1;
+  height: 100vh;
+  background-color: gray;
+}
+
+#artist-img {
+  background-color: blue;
+  height: 45%;
+}
+
+#side-bar-place-holder {
+  width: 270px;
+  height: 100vh;
+  background-color: #000000;
+}
+
+#artist-songs {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(88, 88, 88, 1) 0%,
+    rgba(88, 88, 88, 1) 25%,
+    rgba(18, 18, 18, 1) 55%
+  );
+}
+
+#play-button-row {
+  /* background-color: white; */
+  height: 100px;
+  width: 100%;
+}
+
+.song-img {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+
+#artist-pick-img {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
 }
