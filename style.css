@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 body {
@@ -169,4 +170,98 @@ h2 {
 }
 .player-icons {
   width: 250px;
+
+body {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+#NavBar {
+  width: 270px;
+  height: 795px;
+  left: 0px;
+  top: 1px;
+  background-color: #000000;
+}
+
+.bg-test {
+  color: white;
+  width: 100%;
+}
+
+.navbar-icon-square {
+  height: 24px;
+  width: 24px;
+  background-color: #b2b2b2;
+}
+
+#navbar-liked-songs {
+  background: linear-gradient(
+    135deg,
+    #4000f4 0%,
+    #603aed 22.48%,
+    #7c6ee6 46.93%,
+    #979fe1 65.71%,
+    #a2b3de 77.68%,
+    #adc8dc 88.93%,
+    #c0ecd7 100%
+  );
+  border-radius: 1px;
+}
+
+.navbar-selected {
+  height: 50px;
+  border-radius: 6px;
+}
+
+.navbar-selected:hover {
+  cursor: pointer;
+  background-color: #282828;
+  height: 50px;
+  border-radius: 6px;
+}
+
+#artist-page {
+  flex-grow: 1;
+  height: 100vh;
+  background-color: gray;
+}
+
+#artist-img {
+  background-color: blue;
+  height: 45%;
+}
+
+#side-bar-place-holder {
+  width: 270px;
+  height: 100vh;
+  background-color: #000000;
+}
+
+#artist-songs {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(88, 88, 88, 1) 0%,
+    rgba(88, 88, 88, 1) 25%,
+    rgba(18, 18, 18, 1) 55%
+  );
+}
+
+#play-button-row {
+  /* background-color: white; */
+  height: 100px;
+  width: 100%;
+}
+
+.song-img {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+
+#artist-pick-img {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
 }
