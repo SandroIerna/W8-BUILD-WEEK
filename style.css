@@ -25,14 +25,14 @@ body {
   overflow: scroll;
   height: 100vh;
 }
-.navbar {
+#profile-top-navbar {
   padding-inline: 0;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
-#profile-top-navbar {
+ .nav-bar{
   background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 301px;
