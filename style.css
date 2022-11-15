@@ -24,6 +24,7 @@ body {
   overflow: scroll;
   height: 100vh;
 }
+
 #profile-top-navbar {
   padding-inline: 0;
   position: sticky;
@@ -140,6 +141,7 @@ h2 {
   padding-inline: 30px;
   color: white;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .playing {
@@ -172,7 +174,7 @@ h2 {
 }
 #NavBar {
   width: 270px;
-  height: 795px;
+  height: 100vh;
   left: 0px;
   top: 0px;
   background-color: #000000;
