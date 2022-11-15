@@ -17,8 +17,10 @@ getSomething = async (artist) => {
   );
   let data = await response.json();
   let albumArray = data.data;
-  console.log(data.data);
-  // artistImg.style.backgroundImage = albumArray[0].artist.picture
+  console.log(albumArray);
+  console.log(albumArray[0].artist.picture);
+  let backgroundImage = albumArray[0].artist.picture;
+
   albumArray.forEach((album) => {
     orderedList.innerHTML += `
     <li class="d-flex justify-content-between">
@@ -29,4 +31,24 @@ getSomething = async (artist) => {
     <p>${album.duration} seconds</p>
   </li>`;
   });
+};
+
+getArtist = async (id) => {
+  let response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`,
+    options
+  );
+  let data = await response.json();
+  console.log(data);
+  let backgroundImage = data.picture_big;
+  artistImg.style.backgroundImage = `url(${backgroundImage})`;
+};
+
+getAlbum = async (id) => {
+  let response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
+    options
+  );
+  let data = await response.json();
+  console.log(data.picture_big);
 };

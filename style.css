@@ -201,7 +201,16 @@ h2 {
 }
 
 #navbar-liked-songs {
-  background: linear-gradient(135deg, #4000f4 0%, #603aed 22.48%, #7c6ee6 46.93%, #979fe1 65.71%, #a2b3de 77.68%, #adc8dc 88.93%, #c0ecd7 100%);
+  background: linear-gradient(
+    135deg,
+    #4000f4 0%,
+    #603aed 22.48%,
+    #7c6ee6 46.93%,
+    #979fe1 65.71%,
+    #a2b3de 77.68%,
+    #adc8dc 88.93%,
+    #c0ecd7 100%
+  );
   border-radius: 1px;
 }
 
@@ -227,6 +236,8 @@ h2 {
 #artist-img {
   background-color: blue;
   height: 45%;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 #side-bar-place-holder {
@@ -237,7 +248,12 @@ h2 {
 
 #artist-songs {
   width: 100%;
-  background: linear-gradient(180deg, rgba(88, 88, 88, 1) 0%, rgba(88, 88, 88, 1) 25%, rgba(18, 18, 18, 1) 55%);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 88, 88, 1) 0%,
+    rgba(88, 88, 88, 1) 25%,
+    rgba(18, 18, 18, 1) 55%
+  );
 }
 
 #play-button-row {
@@ -256,4 +272,8 @@ h2 {
   height: 70px;
   width: 70px;
   background-color: #fff;
+}
+
+div#popular-section > div.mt-3 {
+  overflow: auto;
 }
