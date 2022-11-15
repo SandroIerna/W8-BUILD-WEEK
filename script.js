@@ -8,11 +8,25 @@ const options = {
   },
 };
 
-getSomething = async () => {
+let orderedList = document.querySelector("div#popular-section ol");
+let artistImg = document.getElementById("artist-img");
+getSomething = async (artist) => {
   let response = await fetch(
-    "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen",
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
     options
   );
   let data = await response.json();
-  console.log(data.data[0]);
+  let albumArray = data.data;
+  console.log(data.data);
+  // artistImg.style.backgroundImage = albumArray[0].artist.picture
+  albumArray.forEach((album) => {
+    orderedList.innerHTML += `
+    <li class="d-flex justify-content-between">
+    <p>n°</p>
+  <img src="${album.album.cover}" alt="" />
+    <p>${album.title}</p>
+    <p>Views</p>
+    <p>${album.duration} seconds</p>
+  </li>`;
+  });
 };
