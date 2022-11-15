@@ -221,3 +221,7 @@ hr {
 .player-icons {
   width: 250px;
 }
+
+li {
+  list-style: none;
+}
