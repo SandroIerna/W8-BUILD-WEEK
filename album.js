@@ -1,18 +1,16 @@
-console.log("hello");
-
-let albumInfo = document.getElementById("trackInfo");
+let albumInfo = document.getElementById("trackInfo")
 
 getAlbum = async (id) => {
   const response = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
     options
-  );
-  const data = await response.json();
-  console.log(data);
-  console.log(data.title);
-  console.log(data.cover);
-  console.log(data.cover_small);
-  console.log(data.artist.name);
+  )
+  const data = await response.json()
+  console.log(data)
+  console.log(data.title)
+  console.log(data.cover)
+  console.log(data.cover_small)
+  console.log(data.artist.name)
 
   albumInfo.innerHTML = `
   <div class="card ml-4 mt-5" style="width: 18rem">
@@ -36,12 +34,12 @@ getAlbum = async (id) => {
         </h3>
       </div>
     </div>
-    `;
+    `
 
-  let trackList = document.getElementById("trackList");
+  let trackList = document.getElementById("trackList")
 
-  let trackArray = data.tracks.data;
-  console.log(data.tracks.data);
+  let trackArray = data.tracks.data
+  console.log(data.tracks.data)
   trackArray.forEach((track, index) => {
     trackList.innerHTML += `
     <ul id="album-list">
@@ -62,6 +60,6 @@ getAlbum = async (id) => {
    <p class="info-list-paragraph">${track.duration} seconds</p>
     </div>
    </div>
-    </li>`;
-  });
-};
+    </li>`
+  })
+}

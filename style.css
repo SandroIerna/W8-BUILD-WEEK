@@ -24,9 +24,9 @@ body {
   height: 100vh;
   background: linear-gradient(
     180deg,
-    rgba(86, 28, 73, 1) 26%,
-    rgba(70, 36, 68, 1) 18%,
-    rgb(11, 12, 12, 1) 36%
+    rgba(86, 28, 73, 1) 30%,
+    rgba(70, 36, 68, 1) 30%,
+    rgb(11, 12, 12, 1) 40%
   );
 }
 
@@ -333,4 +333,10 @@ li {
 
 .display-hidden {
   display: none;
+}
+
+hr {
+  width: 94.5%;
+  background-color: #544552;
+  margin-inline: auto;
 }
