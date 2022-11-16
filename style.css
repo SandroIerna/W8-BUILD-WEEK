@@ -1,88 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
 
-html,
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
+
 body {
-  background: #010000;
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  font-size: 10pt;
-  height: 100vh;
-}
-
-h3 {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 35px;
-  color: rgb(233, 219, 219);
-  font-weight: 700;
-}
-
-.btns-prev-next {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.user-name-div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #000000;
-  width: 120px;
-  height: 30px;
-  padding: 0.4em;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.user-name-text {
-  font-size: 0.7rem;
-}
-
-.btn-prev,
-.btn-next {
-  cursor: pointer;
-  margin-inline: 0.3em;
-}
-
-.img-btn {
-  height: 22px;
-}
-.avatar {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 3px;
-}
-
-#artist-midScreen {
-  width: 330px;
-}
-
-#album-container {
-  height: 240px;
-}
-
-#artist-topRec {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(
+  position: relative;
+  background-image: linear-gradient(
     180deg,
-    rgba(86, 28, 73, 1) 26%,
-    rgba(70, 36, 68, 1) 18%,
-    rgb(11, 12, 12, 1) 36%
+    #222222 0%,
+    #1f1f1f 11.64%,
+    #171717 25.66%,
+    #161616 32.94%,
+    #151515 35.98%,
+    #131313 44.89%,
+    #121212 55.22%,
+    #121212 75.34%,
+    #121212 85.45%,
+    rgba(18, 18, 18, 1) 100%
   );
+
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  max-width: 1360px;
+  overflow: scroll;
+  height: 100vh;
+
 }
 
 #profile-top-navbar {
   padding-inline: 0;
-  margin-inline: auto;
+
+
   position: sticky;
   top: 0;
   z-index: 1;
 }
+
+
+.nav-bar {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 301px;
+}
+
+h2 {
+  color: white;
+  margin-block-start: 65px;
+}
+
 
 #profile-avatar {
   color: white;
@@ -113,32 +78,22 @@ h1 {
   justify-content: space-between;
 }
 
-.artist-info-banner {
-  font-size: 10px;
-}
-
-#NavBar {
-  font-family: "Montserrat", sans-serif;
-  width: 270px;
-  height: 795px;
-  left: 0px;
-  top: 1px;
-  background-color: #000000;
-}
-
-.bg-test {
+.top-card-title {
   color: white;
-  width: 100%;
+}
+.top-cards {
+  background-color: #303030;
+  height: 10vh;
+  width: 300px;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  height: 90px;
 }
 
-.navbar-icon-square {
-  height: 24px;
-  width: 24px;
-  background-color: #b2b2b2;
-}
-
-#navbar-liked-songs {
-  background: linear-gradient(
+.top-card-image-icon {
+  background-image: linear-gradient(
     135deg,
     #4000f4 0%,
     #603aed 22.48%,
@@ -148,37 +103,51 @@ h1 {
     #adc8dc 88.93%,
     #c0ecd7 100%
   );
-  border-radius: 1px;
-}
 
-.tracklist-title {
+  height: 100%;
+  width: 100px;
+  position: absolute;
+  left: 0;
   display: flex;
-  width: 98%;
-  margin-inline: auto;
-  justify-content: space-between;
-  border-bottom: 1px rgb(227, 241, 255);
+  justify-content: center;
+}
+.top-card-image-icon img {
+  width: 30px;
+}
+.top-card-title h5 {
+  margin-inline-start: 20px;
+  margin-bottom: 0;
+}
+.top-card-title {
+  position: absolute;
+  left: 100px;
+}
+.row {
+  row-gap: 2vh;
 }
 
-.navbar-selected {
-  height: 50px;
-  border-radius: 6px;
+.card {
+  padding: 10px;
+  background-color: #181818;
+  border-radius: 5px;
+  color: white;
 }
-
-.navbar-selected:hover {
-  cursor: pointer;
-  background-color: #282828;
-  height: 50px;
-  border-radius: 6px;
+.card-title {
+  color: white;
+  margin: 0;
+  font-size: 1.1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
+.card-text {
+  color: #b3b3b3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.9em;
+  margin-block: 5px;
 
-.title-artist {
-  font-size: 5rem;
-}
-
-hr {
-  width: 96%;
-  margin-inline: auto;
-  background-color: #30262c;
 }
 
 .bottom-container {
@@ -222,6 +191,80 @@ hr {
   width: 250px;
 }
 
-li {
-  list-style: none;
+
+#NavBar {
+  width: 270px;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background-color: #000000;
+}
+
+.bg-test {
+  color: white;
+  width: 100%;
+}
+
+.navbar-icon-square {
+  height: 24px;
+  width: 24px;
+  background-color: #b2b2b2;
+}
+
+#navbar-liked-songs {
+  background: linear-gradient(135deg, #4000f4 0%, #603aed 22.48%, #7c6ee6 46.93%, #979fe1 65.71%, #a2b3de 77.68%, #adc8dc 88.93%, #c0ecd7 100%);
+  border-radius: 1px;
+}
+
+.navbar-selected {
+  height: 50px;
+  border-radius: 6px;
+}
+
+.navbar-selected:hover {
+  cursor: pointer;
+  background-color: #282828;
+  height: 50px;
+  border-radius: 6px;
+}
+
+#artist-page {
+  color: white;
+  flex-grow: 1;
+  height: 100vh;
+  background-color: gray;
+}
+
+#artist-img {
+  background-color: blue;
+  height: 45%;
+}
+
+#side-bar-place-holder {
+  width: 270px;
+  height: 100vh;
+  background-color: #000000;
+}
+
+#artist-songs {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(88, 88, 88, 1) 0%, rgba(88, 88, 88, 1) 25%, rgba(18, 18, 18, 1) 55%);
+}
+
+#play-button-row {
+  /* background-color: white; */
+  height: 100px;
+  width: 100%;
+}
+
+.song-img {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}
+
+#artist-pick-img {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
 }

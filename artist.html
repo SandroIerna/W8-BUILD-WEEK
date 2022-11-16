@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ------------------------------ Navbar Top ------------------------------ -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav back-forward-icon mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link back-icon" href="#">
+              <img src="./icons/back.svg" alt="" />
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link forward-icon" href="#">
+              <img src="./icons/forward gray.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+        <div id="profile-avatar" class="form-inline my-2 my-lg-0">
+          <div id="profile-image"><img src="./icons/profile.png" alt="" /></div>
+          <div id="profile-name">Angel</div>
+          <div id="profile-icon">
+            <img src="./icons/drop-down.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- ------------------------------ Navbar ------------------------------ -->
+    <nav
+      id="NavBar"
+      class="navbar navbar-dark flex-column align-content-start justify-content-start fixed-top"
+    >
+      <div class="d-flex bg-test">
+        <img
+          class="ml-3 my-3"
+          src="./assets/Spotify logo.png"
+          alt="The spotify Logo"
+        />
+      </div>
+      <div class="flex-column bg-test">
+        <div class="d-flex align-items-center navbar-selected">
+          <img src="./assets/Vector.png" alt="Home Image" class="ml-3" />
+          <p class="my-0 mx-3">Home</p>
+        </div>
+        <div class="d-flex align-items-center navbar-selected">
+          <img
+            src="./assets/Vector (1).png"
+            alt="Search Lens Image"
+            class="ml-3"
+          />
+          <p class="my-0 mx-3">Search</p>
+        </div>
+        <div class="d-flex align-items-center navbar-selected">
+          <img src="./assets/library.png" alt="Library symbol" class="ml-3" />
+          <p class="my-0 mx-3">Your Library</p>
+        </div>
+      </div>
+      <div class="flex-column bg-test">
+        <div class="d-flex align-items-center navbar-selected">
+          <div
+            class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center"
+          >
+            <img src="./assets/Vector (2).png" alt="" />
+          </div>
+          <p class="my-0 mx-3">Create PlayList</p>
+        </div>
+        <div class="d-flex align-items-center navbar-selected">
+          <div
+            id="navbar-liked-songs"
+            class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center"
+          >
+            <img src="./assets/Vector (3).png" alt="" />
+          </div>
+          <p class="my-0 mx-3">Liked Songs</p>
+        </div>
+      </div>
+      <div class="flex-column bg-test flex-grow-1 overflow-auto">
+        <p class="navbar-song-list my-1 ml-3">Funky Heavy Bluesy</p>
+        <p class="navbar-song-list my-1 ml-3">Your Top Songs 2020</p>
+        <p class="navbar-song-list my-1 ml-3">In Love With You - Erykay...</p>
+        <p class="navbar-song-list my-1 ml-3">This Is Rod Stewart</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+        <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+      </div>
+      <div class="flex-column bg-test navbar-selected">
+        <div class="d-flex align-items-center my-3 align-self-end">
+          <img src="./assets/Vector (4).png" alt="Home Image" class="ml-3" />
+          <p class="my-0 mx-3">Install App</p>
+        </div>
+      </div>
+    </nav>
+    <!-- ------------------------------------- Main Page ------------------------------------- -->
+    <main class="d-flex">
+      <div id="side-bar-place-holder"></div>
+      <div id="artist-page" class="d-flex flex-column flex-grow-1">
+        <div id="artist-img" class="d-flex flex-column justify-content-end">
+          <div class="my-5 mx-4">
+            <div>Verified Artist</div>
+            <h1>ArtistName</h1>
+            <div>Monthly listeners</div>
+          </div>
+        </div>
+        <div id="artist-songs" class="d-flex flex-column flex-grow-1">
+          <div
+            id="play-button-row"
+            class="d-flex justify-content-start align-items-center"
+          >
+            <div class="ml-4">
+              <img src="./assets/Play.png" alt="Play button" />
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-center mx-4 border rounded"
+            >
+              <h5 class="my-1 mx-4">Follow</h5>
+            </div>
+            <div>
+              <img src="./assets/icon.png" alt="ellipses" />
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div id="popular-section" class="flex-column col-7">
+              <h3>Popular</h3>
+              <div class="mt-3">
+                <ol>
+                  <li class="d-flex justify-content-between">
+                    <p>n°</p>
+                    <div class="song-img"></div>
+                    <!-- <img src="" alt="" /> -->
+                    <p>Title</p>
+                    <p>Views</p>
+                    <p>Time</p>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <p>n°</p>
+                    <div class="song-img"></div>
+                    <!-- <img src="" alt="" /> -->
+                    <p>Title</p>
+                    <p>Views</p>
+                    <p>Time</p>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <p>n°</p>
+                    <div class="song-img"></div>
+                    <!-- <img src="" alt="" /> -->
+                    <p>Title</p>
+                    <p>Views</p>
+                    <p>Time</p>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <p>n°</p>
+                    <div class="song-img"></div>
+                    <!-- <img src="" alt="" /> -->
+                    <p>Title</p>
+                    <p>Views</p>
+                    <p>Time</p>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <p>n°</p>
+                    <div class="song-img"></div>
+                    <!-- <img src="" alt="" /> -->
+                    <p>Title</p>
+                    <p>Views</p>
+                    <p>Time</p>
+                  </li>
+                </ol>
+              </div>
+              <h6>SEE MORE</h6>
+            </div>
+            <div id="artist-pick-section" class="flex-column col-4">
+              <h3>Artist pick</h3>
+              <div class="d-flex">
+                <div id="artist-pick-img"></div>
+                <!-- <img src="" alt="" /> -->
+                <div class="flex-column ml-3">
+                  <div>Posted By</div>
+                  <div>Best of</div>
+                  <div>Playlist</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ------------------------------------- Player Section Bottom ------------------------------------- -->
+
+    <div class="bottom-container d-flex">
+      <div class="playing d-flex">
+        <div class="playing-image">
+          <img src="./images/playing.png" alt="" />
+        </div>
+        <div class="playing-title">
+          <div>Weekly Motivation</div>
+          <div>Tie up</div>
+        </div>
+        <div>
+          <img src="./icons/green-heart.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="player d-flex flex-column justify-content-center">
+        <div class="player-icons d-flex align-items-center">
+          <div><img src="./icons/shurffle.svg" alt="" /></div>
+          <div><img src="./icons/prev.svg" alt="" /></div>
+          <div><img src="./icons/play.svg" alt="" /></div>
+          <div><img src="./icons/next.svg" alt="" /></div>
+          <div><img src="./icons/playall.svg" alt="" /></div>
+        </div>
+        <div class="player-bar d-flex">
+          <span>1:45</span>
+          <div class="progress" style="height: 5px">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 25%"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          3:56
+        </div>
+      </div>
+
+      <div class="other-functions d-flex">
+        <div class="player-icons d-flex align-items-center justify-content-a">
+          <div><img src="./icons/mic.svg" alt="" /></div>
+          <div><img src="./icons/playlist.svg" alt="" /></div>
+          <div class="volume d-flex align-items-center">
+            <img src="./icons/volume.svg" alt="" />
+            <div class="progress" style="height: 5px; width: 100px">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
