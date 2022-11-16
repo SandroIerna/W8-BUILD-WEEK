@@ -20,16 +20,17 @@ getSomething = async (artist) => {
   console.log(albumArray);
   console.log(albumArray[0].artist.picture);
   let backgroundImage = albumArray[0].artist.picture;
-
+  let number = 1;
   albumArray.forEach((album) => {
     orderedList.innerHTML += `
-    <li class="d-flex justify-content-between">
-    <p>n°</p>
-  <img src="${album.album.cover}" alt="" />
-    <p>${album.title}</p>
-    <p>Views</p>
-    <p>${album.duration} seconds</p>
+    <li class="d-flex justify-content-between row">
+    <p class="col-1">${number}</p>
+    <img class="artist-page-fitting-img" src="${album.album.cover}" alt="" />
+    <p class="artist-page-ellipsed-text col-4">${album.title}</p>
+    <p class="col-2">Views ${album.rank}</p>
+    <p class="artist-page-ellipsed-text col-3">${album.duration} seconds</p>
   </li>`;
+    number++;
   });
 };
 
@@ -42,6 +43,7 @@ getArtist = async (id) => {
   console.log(data);
   let backgroundImage = data.picture_big;
   artistImg.style.backgroundImage = `url(${backgroundImage})`;
+  getSomething(data.name);
 };
 
 getAlbum = async (id) => {
@@ -50,5 +52,6 @@ getAlbum = async (id) => {
     options
   );
   let data = await response.json();
-  console.log(data.picture_big);
+
+  console.log(data);
 };
