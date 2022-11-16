@@ -55,3 +55,7 @@ getAlbum = async (id) => {
 
   console.log(data);
 };
+
+let goToHome = function () {
+  window.location.assign("./home.html");
+};
