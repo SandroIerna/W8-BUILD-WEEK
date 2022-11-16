@@ -32,11 +32,12 @@ body {
 .sidebar-placeholder {
   min-width: 270px;
 }
-
+.scroll {
+  height: 170vh;
+}
 .container {
   /* max-width: 1500px; */
   overflow: scroll;
-  height: 100vh;
 }
 
 #profile-top-navbar {
@@ -138,6 +139,12 @@ h2 {
   background-color: #181818;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.card:hover {
+  background-color: #363636;
+  transition: 1s;
 }
 .card-title {
   color: white;
