@@ -37,11 +37,12 @@ body {
 .sidebar-placeholder {
   min-width: 270px;
 }
-
+.scroll {
+  height: 170vh;
+}
 .container {
   /* max-width: 1500px; */
   overflow: scroll;
-  height: 100vh;
 }
 
 #profile-top-navbar {
@@ -152,6 +153,12 @@ h2 {
   background-color: #181818;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.card:hover {
+  background-color: #363636;
+  transition: 1s;
 }
 .card-title {
   color: white;
@@ -174,12 +181,12 @@ h2 {
   background-color: #282828;
   height: 100px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding-inline: 30px;
   color: white;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 1;
 }
 
 .playing {
@@ -269,13 +276,15 @@ h2 {
 }
 
 #side-bar-place-holder {
-  width: 270px;
+  min-width: 270px;
   height: 100vh;
   background-color: #000000;
 }
 
 #artist-songs {
   width: 100%;
+  height: 55%;
+  overflow: auto;
   background: linear-gradient(
     180deg,
     rgba(88, 88, 88, 1) 0%,
@@ -309,4 +318,19 @@ li {
 #album-scroll-container {
   height: 45vh;
   overflow: auto;
+}
+
+.artist-page-fitting-img {
+  width: 30px;
+  height: 30px;
+}
+
+.artist-page-ellipsed-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.display-hidden {
+  display: none;
 }

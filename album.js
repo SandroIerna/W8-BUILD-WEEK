@@ -1,17 +1,22 @@
-console.log("hello")
+
+console.log("hello");
+
 
 const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "11199b50e3msh52a2017ab11122fp1bbd9cjsn6087fc9ee287",
+
     "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
   }
 }
+
 
 getAlbum = async (id) => {
   const response = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
     options
+
   )
   const data = await response.json()
   console.log(data)
@@ -74,3 +79,4 @@ getAlbum = async (id) => {
     </li>`
   })
 }
+
