@@ -1,4 +1,12 @@
-console.log("hello")
+console.log("hello");
+
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "1afa0d0c22msh9ca3c1a4e25e9f1p1e1335jsn5cc8b3896228",
+    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+  },
+};
 
 let orderedList = document.querySelector("div#popular-section ol");
 let artistImg = document.getElementById("artist-img");
@@ -6,7 +14,6 @@ getSomething = async (artist) => {
   let response = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
     options
-
   );
   let data = await response.json();
   let albumArray = data.data;
@@ -39,7 +46,7 @@ getArtist = async (id) => {
   getSomething(data.name);
 };
 
-getAlbum = async (id) => {
+getAlbumTest = async (id) => {
   let response = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
     options
@@ -52,4 +59,3 @@ getAlbum = async (id) => {
 let goToHome = function () {
   window.location.assign("./home.html");
 };
-
