@@ -235,5 +235,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
+    <script>
+      const artistId = new URLSearchParams(window.location.search).get(
+        "artistID"
+      );
+      getArtist(artistId);
+    </script>
   </body>
 </html>
