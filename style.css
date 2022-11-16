@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 body {
@@ -23,14 +24,18 @@ body {
   max-width: 1360px;
   overflow: scroll;
   height: 100vh;
+
 }
 
 #profile-top-navbar {
   padding-inline: 0;
+
+
   position: sticky;
   top: 0;
   z-index: 1;
 }
+
 
 .nav-bar {
   background-color: rgb(255, 255, 255);
@@ -42,6 +47,7 @@ h2 {
   color: white;
   margin-block-start: 65px;
 }
+
 
 #profile-avatar {
   color: white;
@@ -71,6 +77,7 @@ h2 {
   width: 90px;
   justify-content: space-between;
 }
+
 .top-card-title {
   color: white;
 }
@@ -96,6 +103,7 @@ h2 {
     #adc8dc 88.93%,
     #c0ecd7 100%
   );
+
   height: 100%;
   width: 100px;
   position: absolute;
@@ -139,6 +147,7 @@ h2 {
   white-space: nowrap;
   font-size: 0.9em;
   margin-block: 5px;
+
 }
 
 .bottom-container {
@@ -181,6 +190,8 @@ h2 {
 .player-icons {
   width: 250px;
 }
+
+
 #NavBar {
   width: 270px;
   height: 100vh;
