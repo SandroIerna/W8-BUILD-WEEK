@@ -1,6 +1,6 @@
 console.log("hello");
 
-let trackList = document.getElementById("trackInfo");
+let albumInfo = document.getElementById("trackInfo");
 
 getAlbum = async (id) => {
   const response = await fetch(
@@ -14,7 +14,7 @@ getAlbum = async (id) => {
   console.log(data.cover_small);
   console.log(data.artist.name);
 
-  trackList.innerHTML = `
+  albumInfo.innerHTML = `
   <div class="card ml-4 mt-5" style="width: 18rem">
       <img
         src="${data.cover}"
@@ -37,4 +37,31 @@ getAlbum = async (id) => {
       </div>
     </div>
     `;
+
+  let trackList = document.getElementById("trackList");
+
+  let trackArray = data.tracks.data;
+  console.log(data.tracks.data);
+  trackArray.forEach((track, index) => {
+    trackList.innerHTML += `
+    <ul id="album-list">
+   <li>
+   <div class="d-flex justify-content-between">
+   <div class="d-flex align-items-center">
+   <div class="mr-5">
+     <p class="info-list-paragraph">${index + 1}</p>
+    </div>
+       <div>
+     <p class="info-list-paragraph">
+       <strong>${track.title}</strong>
+     </p>
+     <p class="info-list-paragraph">${data.artist.name}</p>
+   </div>
+   </div>
+   <div class="mr-4">
+   <p class="info-list-paragraph">${track.duration} seconds</p>
+    </div>
+   </div>
+    </li>`;
+  });
 };

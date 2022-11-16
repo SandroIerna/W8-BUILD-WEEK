@@ -1,13 +1,8 @@
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "1afa0d0c22msh9ca3c1a4e25e9f1p1e1335jsn5cc8b3896228",
-    "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-  },
-};
-
 const homeDisplayAlbum = async (artist) => {
-  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`, options);
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
+    options
+  );
   const data = await response.json();
 
   const albumArray = data.data;
@@ -45,7 +40,10 @@ const homeDisplayAlbum = async (artist) => {
 const homeDisplayArtist = async (id, idName) => {
   let randomImage = id;
   for (let i = 0; i < 6; i++) {
-    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${randomImage}`, options);
+    const response = await fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/artist/${randomImage}`,
+      options
+    );
     const artists = await response.json();
     // console.log(artists);
 
@@ -71,6 +69,6 @@ const homeDisplayArtist = async (id, idName) => {
 
 const homeRandomNumber = () => Math.floor(Math.random() * 200);
 
-homeDisplayAlbum("T-pain");
+homeDisplayAlbum("rihanna");
 homeDisplayArtist(homeRandomNumber(), "artist-row");
 homeDisplayArtist(homeRandomNumber(), "artist-row2");
