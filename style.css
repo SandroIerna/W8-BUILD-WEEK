@@ -19,20 +19,36 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+#artist-topRec {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(86, 28, 73, 1) 26%, rgba(70, 36, 68, 1) 18%, rgb(11, 12, 12, 1) 36%);
+}
+
+#artist-midScreen {
+  min-width: 270px;
+}
+
+.sidebar-placeholder {
+  min-width: 270px;
+}
+
 .container {
-  max-width: 1360px;
+  /* max-width: 1500px; */
   overflow: scroll;
   height: 100vh;
 }
-.navbar {
+
+#profile-top-navbar {
   padding-inline: 0;
+
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
 .nav-bar {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 301px;
 }
@@ -55,6 +71,13 @@ h2 {
   padding-inline-end: 10px;
 }
 
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
 .back-icon,
 .forward-icon {
   background-color: black;
@@ -70,6 +93,7 @@ h2 {
   width: 90px;
   justify-content: space-between;
 }
+
 .top-card-title {
   color: white;
 }
@@ -86,6 +110,7 @@ h2 {
 
 .top-card-image-icon {
   background-image: linear-gradient(135deg, #4000f4 0%, #603aed 22.48%, #7c6ee6 46.93%, #979fe1 65.71%, #a2b3de 77.68%, #adc8dc 88.93%, #c0ecd7 100%);
+
   height: 100%;
   width: 100px;
   position: absolute;
@@ -135,11 +160,12 @@ h2 {
   background-color: #282828;
   height: 100px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding-inline: 30px;
   color: white;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .playing {
@@ -170,9 +196,10 @@ h2 {
 .player-icons {
   width: 250px;
 }
+
 #NavBar {
   width: 270px;
-  height: 795px;
+  height: 89.3vh;
   left: 0px;
   top: 0px;
   background-color: #000000;
@@ -207,6 +234,7 @@ h2 {
 }
 
 #artist-page {
+  color: white;
   flex-grow: 1;
   height: 100vh;
   background-color: gray;
@@ -244,4 +272,13 @@ h2 {
   height: 70px;
   width: 70px;
   background-color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+#album-scroll-container {
+  height: 45vh;
+  overflow: auto;
 }
