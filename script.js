@@ -10,6 +10,7 @@ const options = {
 
 let orderedList = document.querySelector("div#popular-section ol");
 let artistImg = document.getElementById("artist-img");
+let artistPickSection = document.getElementById("artist-pick-section");
 getSomething = async (artist) => {
   let response = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
@@ -32,6 +33,16 @@ getSomething = async (artist) => {
   </li>`;
     number++;
   });
+  artistPickSection.innerHTML = `
+  <h3>Artist pick</h3>
+  <div class="d-flex">
+    <img id="artist-pick-img" src="${albumArray[3].album.cover}" alt="" />
+    <div class="flex-column ml-3">
+      <div>Posted By ${artist}</div>
+      <div>Best of</div>
+      <div>Playlist</div>
+    </div>
+  </div>`;
 };
 
 getArtist = async (id) => {
@@ -43,6 +54,13 @@ getArtist = async (id) => {
   console.log(data);
   let backgroundImage = data.picture_big;
   artistImg.style.backgroundImage = `url(${backgroundImage})`;
+  artistImg.innerHTML = `
+  <div class="my-5 mx-4">
+  <div>Verified Artist</div>
+  <h1>${data.name}</h1>
+  <div>Monthly listeners ${data.nb_fan}</div>
+</div>
+`;
   getSomething(data.name);
 };
 
