@@ -342,7 +342,7 @@ li {
   height: 100vh;
 }
 .spotify-banner {
-  height: 10vh;
+  height: 6.5vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -351,36 +351,40 @@ li {
 }
 
 .spotify-banner img {
-  height: 9vh;
+  height: 4.4vh;
   filter: brightness(0);
 }
 
 .login-container {
   height: 80vh;
-  max-width: 400px;
+  max-width: 410px;
   margin-inline: auto;
 }
 
 .continue-btn {
   width: 100%;
-  height: 40px;
+  height: 42px;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btn-facebook {
-  background-color: #3e5a9a;
+  background-color: #3d599c;
   transition: all 0.2s ease-in-out;
 }
 
 .btn-apple {
   background-color: black;
   transition: all 0.2s ease-in-out;
+}
+.or {
+  font-size: 13px;
 }
 
 .btn-facebook:hover,
@@ -389,7 +393,7 @@ li {
 }
 
 .br1 {
-  width: 181px;
+  width: 187px;
   height: 1px;
   background-color: lightgray;
 }
@@ -403,6 +407,7 @@ li {
 
 .user-input::placeholder {
   color: lightgray;
+  font-size: 13px;
 }
 
 .login-area {
@@ -410,15 +415,19 @@ li {
 }
 
 .login-checkbox {
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
+}
+
+input[type="checkbox"] {
+  accent-color: #47b850;
 }
 
 .login-btn {
   border: none;
-  border-radius: 20px;
-  height: 40px;
-  width: 190px;
+  border-radius: 30px;
+  height: 45px;
+  width: 195px;
   background-color: #47b850;
   color: white;
   font-size: 14px;
@@ -433,6 +442,7 @@ li {
   color: #47b850;
   font-size: 14px;
   transition: all 0.2s ease-in-out;
+  margin-bottom: 26px;
 }
 
 .forgot-password-text:hover {
@@ -455,7 +465,7 @@ li {
   width: 100%;
   height: 40px;
   background-color: white;
-  border: 2px solid black;
+  border: 2.4px solid black;
   border-radius: 20px;
   font-size: 14px;
   transition: all 0.2s ease-in-out;
@@ -464,7 +474,6 @@ li {
 .signup-btn:hover {
   background-color: black;
   color: white;
-  transform: scale(1.03);
 }
 
 .disclaimer {

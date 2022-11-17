@@ -28,7 +28,9 @@
         /></a>
       </div>
       <div class="login-container d-flex flex-column align-items-center mt-2">
-        <div class="mb-2">To continue, login to Spotify.</div>
+        <div class="mb-2 mt-4">
+          <strong> To continue, log in to Spotify.</strong>
+        </div>
         <button class="continue-btn btn-facebook mb-2">
           <div class="facebook-logo d-flex align-items-center px-3">
             <svg
@@ -44,7 +46,7 @@
               />
             </svg>
           </div>
-          <span> CONTINUE WITH FACEBOOK</span>
+          <span class="pt-2 pb-2"> CONTINUE WITH FACEBOOK</span>
         </button>
         <button class="continue-btn btn-apple mb-2">
           <div class="apple-logo d-flex align-items-center px-3">
@@ -64,30 +66,38 @@
               />
             </svg>
           </div>
-          <span>CONTINUE WITH APPLE</span>
+          <span class="pt-2 pb-2">CONTINUE WITH APPLE</span>
         </button>
         <div class="d-flex align-items-center mb-2">
           <div class="br1"></div>
-          <div class="px-2">OR</div>
+          <div class="px-2 mt-2 mb-2 or"><strong>OR</strong></div>
           <div class="br1"></div>
         </div>
         <input
-          class="user-input mb-2"
+          class="user-input mb-2 p-3"
           type="email"
           placeholder="Email address or username"
         />
-        <input class="user-input mb-2" type="password" placeholder="Password" />
+        <input
+          class="user-input mb-2 p-3"
+          type="password"
+          placeholder="Password"
+        />
         <div class="login-area d-flex justify-content-between mb-3">
           <div class="remember-me d-flex">
             <div class="d-flex align-items-center">
               <input class="login-checkbox" type="checkbox" />
             </div>
 
-            <span class="d-flex align-items-center px-2">Remember me</span>
+            <span class="d-flex align-items-center px-2 text-black-50"
+              >Remember me</span
+            >
           </div>
           <div>
-            <a href="homepage.html"
-              ><button class="login-btn">LOG IN</button></a
+            <a href="home.html"
+              ><button class="login-btn mt-2 mb-2">
+                <strong>LOG IN</strong>
+              </button></a
             >
           </div>
         </div>
@@ -95,9 +105,9 @@
           <a class="forgot-password-text" href="#">Forgot your password?</a>
         </div>
         <div class="br2 mt-3 mb-3"></div>
-        <div class="account mb-2">Don't have an account?</div>
+        <div class="account mb-3 mt-3">Don't have an account?</div>
         <button class="signup-btn mb-3">SIGN UP FOR SPOTIFY</button>
-        <div class="br2 mb-2"></div>
+        <div class="br2 mb-2 mt-2"></div>
         <div class="disclaimer">
           If you click "Log in with Facebook" and are not a Spotify user, you
           will be registered and agree to Spotify's
