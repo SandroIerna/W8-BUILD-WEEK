@@ -6,6 +6,7 @@ const homeDisplayAlbum = async (artist) => {
   const data = await response.json();
 
   const albumArray = data.data;
+  console.log(albumArray);
 
   let num = 0;
   albumArray.forEach((album) => {
@@ -17,7 +18,7 @@ const homeDisplayAlbum = async (artist) => {
       const homeAlbumRow = document.querySelector("#album-row");
       homeAlbumRow.innerHTML += ` 
         <div class="col-2">
-        <a class="card-link" href="./album.html?albumID=${album.id}">
+        <a class="card-link" href="./album.html?albumID=${album.album.id}">
         <div class="card">
         <img src=${album.album.cover} alt="" />
         <div class="body p-0 my-3">
@@ -69,6 +70,6 @@ const homeDisplayArtist = async (id, idName) => {
 
 const homeRandomNumber = () => Math.floor(Math.random() * 200);
 
-homeDisplayAlbum("rihanna");
+homeDisplayAlbum("eminem");
 homeDisplayArtist(homeRandomNumber(), "artist-row");
 homeDisplayArtist(homeRandomNumber(), "artist-row2");

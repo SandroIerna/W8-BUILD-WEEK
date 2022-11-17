@@ -1,5 +1,3 @@
-console.log("hello");
-
 let albumInfo = document.getElementById("trackInfo");
 
 getAlbum = async (id) => {
