@@ -1,10 +1,11 @@
+const homeAlbumRow = document.querySelector("#album-row");
 const homeDisplayAlbum = async (artist) => {
   const response = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
     options
   );
   const data = await response.json();
-
+  homeAlbumRow.innerHTML = "";
   const albumArray = data.data;
   console.log(albumArray);
 
@@ -15,7 +16,6 @@ const homeDisplayAlbum = async (artist) => {
       //   console.log(album.album.title);
       //   console.log(album.artist.name);
 
-      const homeAlbumRow = document.querySelector("#album-row");
       homeAlbumRow.innerHTML += ` 
         <div class="col-2">
         <a class="card-link" href="./album.html?albumID=${album.album.id}">
