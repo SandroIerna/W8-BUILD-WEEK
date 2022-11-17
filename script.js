@@ -80,7 +80,7 @@ let goToHome = function () {
 
 // ----------------------------------------- search function -----------------------------------------
 
-const homeDisplayAlbum = async (artist) => {
+const searchDisplayAlbum = async (artist) => {
   const response = await fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
     options
@@ -92,7 +92,7 @@ const homeDisplayAlbum = async (artist) => {
 let displaySearch = function () {
   let searchInput = event.target;
   let search = searchInput.value;
-  homeDisplayAlbum(search);
+  searchDisplayAlbum(search);
 };
 
 // ------------------------------------------- mp3 player -------------------------------------------
