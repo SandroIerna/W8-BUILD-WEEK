@@ -15,7 +15,7 @@ getAlbum = async (id) => {
   albumInfo.innerHTML = `
   <div class="card ml-4 mt-5" style="width: 18rem">
       <img
-        src="${data.cover}"
+        src=${data.cover}
         class="card-img-top"
         alt="album-image"
       />
@@ -23,14 +23,14 @@ getAlbum = async (id) => {
     <div  class="d-flex w-100 align-items-end ml-4">
       <div>
         <h3>ALBUM</h3>
-        <h1>"${data.title}"</h1>
+        <h1>${data.title}</h1>
         <h3 class="artist-info-banner">
           <img
             class="avatar"
-            src="${data.cover_small}"
+            src=${data.cover_small}
             alt=""
           />
-          <strong>${data.artist.name}" </strong> - 2022 - 13 songs, 40 min 53 sec
+          <strong>${data.artist.name} </strong> - 2022 - 13 songs, 40 min 53 sec
         </h3>
       </div>
     </div>
@@ -57,9 +57,15 @@ getAlbum = async (id) => {
    </div>
    </div>
    <div class="mr-4">
-   <p class="info-list-paragraph">${track.duration} seconds</p>
+   <p class="info-list-paragraph">${
+     (track.data.duration - (track.data.duration %= 60)) / 60 +
+     (9 < track.data.duration ? ":" : ":0") +
+     track.data.duration
+   } seconds</p>
     </div>
    </div>
     </li>`
   })
 }
+
+// {(tracks.data.duration - (tracks.data.duration %= 60))/60 + (9 < tracks.data.duration ? ":" : ":0") + tracks.data.duration}

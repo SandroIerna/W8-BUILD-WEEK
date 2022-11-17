@@ -177,6 +177,35 @@
             <ul id="album-list"></ul>
           </div>
         </div>
+        <!-----COPYRIGHT AND PRODUCTION INFORMATION-->
+        <div id="record-info" class="col-12">
+          <div>
+            <p style="font-size: 22px">June 7, 2022</p>
+            <p>© 2018 Republic Records, a division of UMG Recordings, Inc.</p>
+            <p>© 2018 Republic Records, a division of UMG Recordings, Inc.</p>
+          </div>
+        </div>
+
+        <!-------More-BY--ARTIST-->
+        <div id="more-bt-artist" class="row col-12 d-flex">
+          <div class="row col-12">
+            <div class="card" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Another Album</h5>
+                <p class="card-text">2018</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Another Album</h5>
+                <p class="card-text">2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -252,10 +281,8 @@
     <script src="./script.js"></script>
     <script src="./album.js"></script>
     <script>
-      const albumID = new URLSearchParams(window.location.search).get(
-        "albumID"
-      );
-      getAlbum(albumID);
+      const albumID = new URLSearchParams(window.location.search).get("albumID")
+      getAlbum(albumID)
     </script>
   </body>
 </html>
