@@ -255,7 +255,9 @@
       const albumID = new URLSearchParams(window.location.search).get(
         "albumID"
       );
-      getAlbum(albumID);
+      window.onload = () => {
+        getAlbum(albumID);
+      };
     </script>
   </body>
 </html>
