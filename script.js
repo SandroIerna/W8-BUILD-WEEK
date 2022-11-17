@@ -78,6 +78,23 @@ let goToHome = function () {
   window.location.assign("./home.html");
 };
 
+// ----------------------------------------- search function -----------------------------------------
+
+const homeDisplayAlbum = async (artist) => {
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
+    options
+  );
+  const data = await response.json();
+  console.log(data);
+};
+
+let displaySearch = function () {
+  let searchInput = event.target;
+  let search = searchInput.value;
+  homeDisplayAlbum(search);
+};
+
 // ------------------------------------------- mp3 player -------------------------------------------
 
 const handlePlaySong = async (audio) => {
