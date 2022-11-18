@@ -97,12 +97,16 @@ const displayArtist = async (artist) => {
   albumArray.forEach((album) => {
     orderedList.innerHTML += `
     <li class="d-flex justify-content-between row" onclick="handleSong(${album.album.id},${album.id})" style="
-    height: 50px;>
+    height: 50px;">
     <p class="col-1">${number}</p>
     <img class="artist-page-fitting-img" src="${album.album.cover_medium}" alt="" />
     <p class="artist-page-ellipsed-text col-4">${album.title}</p>
     <p class="col-2">Views ${album.rank}</p>
     <p class="artist-page-ellipsed-text col-3">${album.duration}</p>
+    <p>
+    <img  onclick="pushInLibraryArray('${album.title}', ${album.artist.id}, ${album.album.id}, ${album.id})" src="./icons/Menu/heart.svg" alt="", ${album.artist.id}, ${album.album.id}, ${album.id})"/>
+    </p>
+
   </li>`;
     number++;
   });
@@ -269,4 +273,31 @@ const handleSong = async (albumID, trackID) => {
   handlePlaySong(audio);
 };
 
-//----------------------------------------------------------------------------------------------------
+// --------------------------------------------- Library ---------------------------------------------
+
+let library = document.querySelector("div.album-favorites.flex-column.bg-test");
+console.log(library);
+let libraryArray = [];
+const displayLibrary = () => {
+  library.innerHTML = "";
+  libraryArray.forEach((book) => {
+    library.innerHTML += `
+<a style="color:white; text-style:none;"href="./album.html?albumID=${book.album_ID}"><p class="navbar-song-list my-1 ml-3">${book.title}</p></a>
+`;
+  });
+};
+
+const pushInLibraryArray = (title, artist_ID, album_ID, track_ID) => {
+  let filteredArray = libraryArray.filter((book) => book.track_ID === track_ID);
+  console.log("filtered array", filteredArray);
+  if (filteredArray.length === 0) {
+    libraryArray.push({
+      title: title,
+      artist_ID: artist_ID,
+      album_ID: album_ID,
+      track_ID: track_ID,
+    });
+  } else {
+  }
+  displayLibrary();
+};
