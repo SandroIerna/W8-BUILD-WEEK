@@ -105,7 +105,7 @@ const displayArtist = async (artist) => {
   let number = 1;
   albumArray.forEach((album) => {
     orderedList.innerHTML += `
-    <li class="d-flex justify-content-between row" style="
+    <li class="d-flex justify-content-between row" onclick="handleSong(${album.album.id},${album.id})" style="
     height: 50px;>
     <p class="col-1">${number}</p>
     <img class="artist-page-fitting-img" src="${album.album.cover_medium}" alt="" />
@@ -286,7 +286,7 @@ const handleSong = async (albumID, trackID) => {
   song = filteredArray[0].preview;
   console.log(song);
   audio = new Audio(`${song}`);
-  handlePlaySong();
+  handlePlaySong(audio);
 };
 
 //----------------------------------------------------------------------------------------------------

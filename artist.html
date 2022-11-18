@@ -15,33 +15,57 @@
   </head>
   <body class="d-flex">
     <!-- ------------------------------ Navbar ------------------------------ -->
-    <nav id="NavBar" class="navbar navbar-dark flex-column align-content-start justify-content-start fixed-top">
+    <nav
+      id="NavBar"
+      class="navbar navbar-dark flex-column align-content-start justify-content-start fixed-top"
+    >
       <div class="d-flex bg-test mb-2">
-        <img id="logo" class="ml-3 my-3" src="./icons/Logo/Green.svg" alt="The spotify Logo" />
+        <img
+          id="logo"
+          class="ml-3 my-3"
+          src="./icons/Logo/Green.svg"
+          alt="The spotify Logo"
+        />
       </div>
       <div class="flex-column bg-test mb-3" style="font-size: 0.9em">
-        <div class="d-flex align-items-center navbar-selected" onclick="goToHome()">
+        <div
+          class="d-flex align-items-center navbar-selected"
+          onclick="goToHome()"
+        >
           <img src="./icons/Menu/Vector.svg" alt="Home Image" class="ml-3" />
           <p class="my-0 mx-3">Home</p>
         </div>
         <div class="d-flex align-items-center navbar-selected">
-          <img src="./icons/Menu/search.svg" alt="Search Lens Image" class="ml-3" />
+          <img
+            src="./icons/Menu/search.svg"
+            alt="Search Lens Image"
+            class="ml-3"
+          />
           <p class="my-0 mx-3">Search</p>
         </div>
         <div class="d-flex align-items-center navbar-selected">
-          <img src="./icons/Menu/library.svg" alt="Library symbol" class="ml-3" />
+          <img
+            src="./icons/Menu/library.svg"
+            alt="Library symbol"
+            class="ml-3"
+          />
           <p class="my-0 mx-3">Your Library</p>
         </div>
       </div>
       <div class="flex-column bg-test">
         <div class="d-flex align-items-center navbar-selected">
-          <div class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center">
+          <div
+            class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center"
+          >
             <img src="./icons/Menu/add.svg" alt="" />
           </div>
           <p class="my-0 mx-3">Create PlayList</p>
         </div>
         <div class="d-flex align-items-center navbar-selected mb-3">
-          <div id="navbar-liked-songs" class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center">
+          <div
+            id="navbar-liked-songs"
+            class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center"
+          >
             <img src="./icons/Menu/favorite.svg" alt="" />
           </div>
           <p class="my-0 mx-3">Liked Songs</p>
@@ -68,7 +92,11 @@
       </div>
       <div class="install-container flex-column bg-test navbar-selected">
         <div class="d-flex align-items-center install">
-          <img src="./icons/Menu/download app.svg" alt="Home Image" class="ml-3" />
+          <img
+            src="./icons/Menu/download app.svg"
+            alt="Home Image"
+            class="ml-3"
+          />
           <p class="my-0 mx-3">Install App</p>
         </div>
       </div>
@@ -110,13 +138,30 @@
             <div>Monthly listeners</div>
           </div>
 
-          <div id="artist-img" class="d-flex flex-column justify-content-end" style="background-color: red"></div>
+          <div
+            id="artist-img"
+            class="d-flex flex-column justify-content-end"
+            style="background-color: red"
+          ></div>
         </div>
         <div id="artist-songs" class="d-flex flex-column flex-grow-1">
-          <div id="play-button-row" class="d-flex justify-content-start align-items-center">
-            <div class="ml-4"><img src="./icons/Menu/PlayOnHover.svg" alt="Play button" style="width: 80px" /></div>
-            <div class="d-flex align-items-center justify-content-center mx-4 border rounded">
-              <h5 class="my-1 mx-4" style="font-size: 0.8em; padding: 5px 0px">FOLLOW</h5>
+          <div
+            id="play-button-row"
+            class="d-flex justify-content-start align-items-center"
+          >
+            <div class="ml-4">
+              <img
+                src="./icons/Menu/PlayOnHover.svg"
+                alt="Play button"
+                style="width: 80px"
+              />
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-center mx-4 border rounded"
+            >
+              <h5 class="my-1 mx-4" style="font-size: 0.8em; padding: 5px 0px">
+                FOLLOW
+              </h5>
             </div>
             <div>
               <img src="./icons/Menu/dots.svg" alt="ellipses" />
@@ -124,11 +169,17 @@
           </div>
           <div class="list-contents d-flex justify-content-between">
             <div id="popular-section" class="flex-column col-7">
-              <h3 style="font-size: 1.2em; margin-inline-start: 10px">Popular</h3>
+              <h3 style="font-size: 1.2em; margin-inline-start: 10px">
+                Popular
+              </h3>
               <div class="mt-3">
                 <ol></ol>
               </div>
-              <h6 style="font-size: 0.9em; margin-inline-start: 24px; color: gray">SEE MORE</h6>
+              <h6
+                style="font-size: 0.9em; margin-inline-start: 24px; color: gray"
+              >
+                SEE MORE
+              </h6>
             </div>
             <div id="artist-pick-section" class="flex-column col-4">
               <h3>Artist pick</h3>
@@ -168,14 +219,23 @@
         <div class="player-icons d-flex align-items-center">
           <div><img src="./icons/shurffle.svg" alt="" /></div>
           <div><img src="./icons/prev.svg" alt="" /></div>
-          <div><img src="./icons/play.svg" alt="" /></div>
+          <div onclick="handlePlaySong(audio)">
+            <img src="./icons/play.svg" alt="" />
+          </div>
           <div><img src="./icons/next.svg" alt="" /></div>
           <div><img src="./icons/playall.svg" alt="" /></div>
         </div>
         <div class="player-bar d-flex">
           <span>1:45</span>
           <div class="progress" style="height: 5px">
-            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 25%"
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
           </div>
           3:56
         </div>
@@ -188,7 +248,14 @@
           <div class="volume d-flex align-items-center">
             <img src="./icons/volume.svg" alt="" />
             <div class="progress" style="height: 5px; width: 100px">
-              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
             </div>
           </div>
         </div>
@@ -208,7 +275,9 @@
 
     <script src="./script.js"></script>
     <script>
-      const artistId = new URLSearchParams(window.location.search).get("artistID");
+      const artistId = new URLSearchParams(window.location.search).get(
+        "artistID"
+      );
       getArtist(artistId);
     </script>
   </body>
