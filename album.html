@@ -126,29 +126,7 @@
         </nav>
 
         <div id="album-container" class="text-white container-fluid">
-          <div id="trackInfo" class="d-flex mt-3">
-            <div class="card ml-4 mt-5" style="width: 18rem">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFehqNL35d6S7oKKTZuJD_HdjPXXSWzp-D_w&usqp=CAU"
-                class="card-img-top"
-                alt="album-image"
-              />
-            </div>
-            <div class="d-flex w-100 align-items-end ml-4">
-              <div>
-                <h3>ALBUM</h3>
-                <h1>More Love, Less Ego</h1>
-                <h3 class="artist-info-banner">
-                  <img
-                    class="avatar"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe3Wmrg2Lr59nEn2lG49g2849aW9eszJkao5w9m0b7CA&s"
-                    alt=""
-                  />
-                  <strong> Wizkid </strong> - 2022 - 13 songs, 40 min 53 sec
-                </h3>
-              </div>
-            </div>
-          </div>
+          <div id="trackInfo" class="d-flex mt-3"></div>
         </div>
 
         <div id="play-button-row" class="d-flex align-items-center mt-4">
@@ -175,6 +153,92 @@
           <!-- DIV WITH UL LI -->
           <div id="trackList">
             <ul id="album-list"></ul>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT AND PRODUCTION INFORMATION-->
+        <div id="record-info" class="col-12">
+          <div>
+            <p id="footer-date" class="text-white-50 mb-0">September 3, 2021</p>
+            <p style="font-size: 12px" class="text-white-50 mb-0">
+              © 2021 Derulo, Inc. under exclusive license to Atlantic
+            </p>
+            <p style="font-size: 12px" class="text-white-50">
+              © 2021 Derulo, Inc. under exclusive license to Atlantic
+            </p>
+          </div>
+        </div>
+        <div
+          id="more-by-artist"
+          class="row col-12 d-flex justify-content-between"
+        >
+          <div class="text-white ml-3">More by Wizkid</div>
+          <div class="row col-12 d-flex justify-content-between mt-1 mb-4">
+            <div class="card ml-3" style="width: 14rem">
+              <div class="d-flex">
+                <img
+                  src="https://cdn.mynigeria.com/imagelib/pics/108/10820304.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">More Love, Less Ego</h5>
+                <p class="card-text">2022</p>
+              </div>
+            </div>
+            <div class="card ml-3" style="width: 14rem">
+              <div class="d-flex">
+                <img
+                  src="https://cdn.mynigeria.com/imagelib/pics/108/10820304.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">More Love, Less Ego</h5>
+                <p class="card-text">2022</p>
+              </div>
+            </div>
+            <div class="card ml-3" style="width: 14rem">
+              <div class="d-flex">
+                <img
+                  src="https://cdn.mynigeria.com/imagelib/pics/108/10820304.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">More Love, Less Ego</h5>
+                <p class="card-text">2022</p>
+              </div>
+            </div>
+            <div class="card ml-3" style="width: 14rem">
+              <div class="d-flex">
+                <img
+                  src="https://cdn.mynigeria.com/imagelib/pics/108/10820304.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">More Love, Less Ego</h5>
+                <p class="card-text">2022</p>
+              </div>
+            </div>
+            <div class="card ml-3" style="width: 14rem">
+              <div class="d-flex">
+                <img
+                  src="https://cdn.mynigeria.com/imagelib/pics/108/10820304.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">More Love, Less Ego</h5>
+                <p class="card-text">2022</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -252,10 +316,8 @@
     <script src="./script.js"></script>
     <script src="./album.js"></script>
     <script>
-      const albumID = new URLSearchParams(window.location.search).get(
-        "albumID"
-      );
-      getAlbum(albumID);
+      const albumID = new URLSearchParams(window.location.search).get("albumID")
+      getAlbum(albumID)
     </script>
   </body>
 </html>
