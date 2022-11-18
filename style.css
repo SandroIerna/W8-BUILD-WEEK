@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
-
+html {
+  height: 100%;
+}
 body {
   position: relative;
   background-image: linear-gradient(
@@ -15,8 +17,10 @@ body {
     #121212 85.45%,
     rgba(18, 18, 18, 1) 100%
   );
-
   font-family: "Work Sans", sans-serif;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #artist-topRec {
@@ -203,6 +207,7 @@ h2 {
 }
 
 .bottom-container {
+  display: flex;
   background-color: #282828;
   height: 100px;
   width: 100%;
@@ -542,4 +547,31 @@ li {
 
 .disclaimer-green {
   color: #47b850;
+}
+
+@media (max-width: 1250px) {
+  #NavBar {
+    display: none;
+  }
+
+  .bottom-container {
+    display: none;
+  }
+  .sidebar-placeholder {
+    min-width: 0;
+  }
+
+  h2 {
+    color: white;
+    margin-block: 35px 25px;
+    font-size: 1.3em;
+  }
+
+  .top {
+    width: 50%;
+  }
+
+  .scroll {
+    height: 200vh;
+  }
 }
