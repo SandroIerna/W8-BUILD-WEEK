@@ -15,7 +15,10 @@ const goToHome = function () {
 const homeAlbumRow = document.querySelector("#album-row");
 
 const homeDisplayAlbum = async (artist) => {
-  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`, options);
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
+    options
+  );
   const data = await response.json();
 
   const albumArray = data.data;
@@ -52,7 +55,10 @@ const homeDisplayAlbum = async (artist) => {
 const homeDisplayArtist = async (id, idName) => {
   let randomImage = id;
   for (let i = 0; i < 6; i++) {
-    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${randomImage}`, options);
+    const response = await fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/artist/${randomImage}`,
+      options
+    );
     const artists = await response.json();
     // console.log(artists);
 
@@ -76,7 +82,8 @@ const homeDisplayArtist = async (id, idName) => {
   }
   i = 0;
 };
-
+let searchForm = document.getElementById("search-form");
+const hideSearch = () => searchForm.classList.toggle("hide");
 const homeRandomNumber = () => Math.floor(Math.random() * 200);
 
 // -------------------------------------- Artist Page Functions --------------------------------------
@@ -87,7 +94,10 @@ let artistPickSection = document.getElementById("artist-pick-section");
 let coverArtist = document.querySelector("#cover-artist");
 
 const displayArtist = async (artist) => {
-  let response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`, options);
+  let response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
+    options
+  );
   let data = await response.json();
   let albumArray = data.data;
   console.log(albumArray);
@@ -96,15 +106,27 @@ const displayArtist = async (artist) => {
   let number = 1;
   albumArray.forEach((album) => {
     orderedList.innerHTML += `
-    <li class="d-flex justify-content-between row" onclick="handleSong(${album.album.id},${album.id})" style="
+    <li class="d-flex justify-content-between row" onclick="handleSong(${
+      album.album.id
+    },${album.id})" style="
     height: 50px;">
     <p class="col-1">${number}</p>
-    <img class="artist-page-fitting-img" src="${album.album.cover_medium}" alt="" />
+    <img class="artist-page-fitting-img" src="${
+      album.album.cover_medium
+    }" alt="" />
     <p class="artist-page-ellipsed-text col-4">${album.title}</p>
     <p class="col-2">Views ${album.rank}</p>
-    <p class="artist-page-ellipsed-text col-3">${album.duration}</p>
+    <p class="artist-page-ellipsed-text col-3"> ${
+      (album.duration - (album.duration %= 60)) / 60 +
+      (9 < album.duration ? ":" : ":0") +
+      album.duration
+    }</p>
     <p>
-    <img  onclick="pushInLibraryArray('${album.title}', ${album.artist.id}, ${album.album.id}, ${album.id})" src="./icons/Menu/heart.svg" alt="", ${album.artist.id}, ${album.album.id}, ${album.id})"/>
+    <img  onclick="pushInLibraryArray('${album.title}', ${album.artist.id}, ${
+      album.album.id
+    }, ${album.id})" src="./icons/Menu/heart.svg" alt="", ${album.artist.id}, ${
+      album.album.id
+    }, ${album.id})"/>
     </p>
 
   </li>`;
@@ -125,7 +147,10 @@ const displayArtist = async (artist) => {
 };
 
 const getArtist = async (id) => {
-  let response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`, options);
+  let response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`,
+    options
+  );
   let data = await response.json();
   console.log(data);
   // let backgroundImage = data.picture_big;
@@ -151,7 +176,10 @@ const getArtist = async (id) => {
 let albumInfo = document.getElementById("trackInfo");
 
 const getAlbum = async (id) => {
-  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`, options);
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/album/${id}`,
+    options
+  );
   const data = await response.json();
   console.log(data);
   console.log(data.title);
@@ -179,7 +207,15 @@ const getAlbum = async (id) => {
             src="${data.cover_small}"
             alt=""
           />
-          <strong >${data.artist.name} </strong> - 2022 - 13 songs, 40 min 53 sec
+          <strong >${data.artist.name} </strong> - ${data.release_date.slice(
+    0,
+    4
+  )} - ${data.nb_tracks + " " + "songs"}, ${
+    (data.duration - (data.duration %= 60)) / 60 +
+    " min " +
+    data.duration +
+    " sec"
+  }
         </h3>
       </div>
     </div>
@@ -211,7 +247,12 @@ const getAlbum = async (id) => {
    </div>
    </div>
    <div class="mr-4">
-   <p class="info-list-paragraph">${track.duration}</p>
+   <p class="info-list-paragraph">
+   ${
+     (track.duration - (track.duration %= 60)) / 60 +
+     (9 < track.duration ? ":" : ":0") +
+     track.duration
+   }</p>
     </div>
    </div>
     </li>`;
@@ -221,12 +262,18 @@ const getAlbum = async (id) => {
 // ----------------------------------------- search function -----------------------------------------
 
 const searchDisplayAlbum = async (artist) => {
-  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`, options);
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`,
+    options
+  );
   const data = await response.json();
 };
 
 const getArtistID = async (search, idName) => {
-  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${search}`, options);
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${search}`,
+    options
+  );
   const homeArtistRow = document.querySelector(`#${idName}`);
   homeArtistRow.innerHTML = "";
   const data = await response.json();
@@ -260,7 +307,9 @@ const handlePlaySong = async (audio) => {
 };
 
 const handleSong = async (albumID, trackID) => {
-  const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`);
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/album/${albumID}`
+  );
   const data = await response.json();
   let tracksArray = data.tracks.data;
   console.log(tracksArray[0].id);

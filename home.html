@@ -26,9 +26,9 @@
               <img src="./icons/Menu/Vector.svg" alt="Home Image" class="ml-3" />
               <p class="my-0 mx-3">Home</p>
             </div>
-            <div class="d-flex align-items-center navbar-selected">
+            <div onclick="hideSearch()" class="d-flex align-items-center navbar-selected">
               <img src="./icons/Menu/search.svg" alt="Search Lens Image" class="ml-3" />
-              <p class="my-0 mx-3">Search</p>
+              <p class="my-0 mx-3" >Search</p>
             </div>
             <div class="d-flex align-items-center navbar-selected">
               <img src="./icons/Menu/library.svg" alt="Library symbol" class="ml-3" />
@@ -98,7 +98,7 @@
             </ul>
 
             
-              <form class="form-inline my-2 my-lg-0">
+              <form id="search-form" class="form-inline my-2 my-lg-0 hide">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeyup="displaySearch(event) "style="
                 border-radius: 50px;
                 width: 300px; border: none;">
