@@ -19,27 +19,44 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
-.container {
-  max-width: 1360px;
-  overflow: scroll;
+#artist-topRec {
+  width: 100%;
   height: 100vh;
+  background: linear-gradient(180deg, rgb(255 209 245) 0%, rgb(181 97 162) 20%, rgb(18 18 18) 50%);
 }
-.navbar {
+
+#artist-midScreen {
+  min-width: 256px;
+}
+
+.sidebar-placeholder {
+  min-width: 270px;
+}
+.scroll {
+  height: 165vh;
+}
+.container {
+  /* max-width: 1500px; */
+  overflow: scroll;
+}
+
+#profile-top-navbar {
   padding-inline: 0;
+
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
-.nav-bar {
-  background-color: rgb(0, 0, 0);
+/* .nav-bar {
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 301px;
-}
+} */
 
 h2 {
   color: white;
-  margin-block-start: 65px;
+  margin-block: 35px 25px;
 }
 
 #profile-avatar {
@@ -53,6 +70,13 @@ h2 {
   border-radius: 50px;
   justify-content: space-between;
   padding-inline-end: 10px;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 3px;
 }
 
 .back-icon,
@@ -70,22 +94,22 @@ h2 {
   width: 90px;
   justify-content: space-between;
 }
+
 .top-card-title {
   color: white;
 }
 .top-cards {
   background-color: #303030;
-  height: 10vh;
-  width: 300px;
   align-items: center;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  height: 90px;
+  height: 80px;
 }
 
 .top-card-image-icon {
   background-image: linear-gradient(135deg, #4000f4 0%, #603aed 22.48%, #7c6ee6 46.93%, #979fe1 65.71%, #a2b3de 77.68%, #adc8dc 88.93%, #c0ecd7 100%);
+
   height: 100%;
   width: 100px;
   position: absolute;
@@ -97,8 +121,12 @@ h2 {
   width: 30px;
 }
 .top-card-title h5 {
-  margin-inline-start: 20px;
+  margin-inline-start: 10px;
   margin-bottom: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
 }
 .top-card-title {
   position: absolute;
@@ -109,10 +137,53 @@ h2 {
 }
 
 .card {
-  padding: 10px;
-  background-color: #181818;
-  border-radius: 5px;
+  padding: 13px;
+  background-color: #232222;
+  border-radius: 8px;
   color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.card img:nth-child(2) {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px -3px black;
+}
+.play-on-hover {
+  position: absolute;
+  bottom: 35%;
+  right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.play-on-hover2 {
+  position: absolute;
+  bottom: 25%;
+  right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#artist-round img:nth-child(2) {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px -3px black;
+}
+.card:hover {
+  background-color: #3d3d3d;
+  transition: 1s;
+}
+.card:hover img {
+  box-shadow: 0px 0px 0px 0px black;
+}
+.card:hover .play-on-hover {
+  bottom: 40%;
+  opacity: 1;
+  transition: 0.5s;
+}
+.card:hover .play-on-hover2 {
+  bottom: 32%;
+  opacity: 1;
+  transition: 0.5s;
 }
 .card-title {
   color: white;
@@ -135,11 +206,12 @@ h2 {
   background-color: #282828;
   height: 100px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   padding-inline: 30px;
   color: white;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .playing {
@@ -169,13 +241,17 @@ h2 {
 }
 .player-icons {
   width: 250px;
+  justify-content: space-evenly;
 }
+
 #NavBar {
-  width: 270px;
-  height: 795px;
+  width: 256px;
+  height: 100vh;
   left: 0px;
   top: 0px;
   background-color: #000000;
+  flex-shrink: 0;
+  z-index: 0;
 }
 
 .bg-test {
@@ -207,31 +283,46 @@ h2 {
 }
 
 #artist-page {
+  color: white;
   flex-grow: 1;
   height: 100vh;
   background-color: gray;
+  margin-inline-start: 256px;
 }
 
 #artist-img {
-  background-color: blue;
-  height: 45%;
+  height: 35%;
+  min-height: 300px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
 }
 
 #side-bar-place-holder {
-  width: 270px;
+  min-width: 270px;
   height: 100vh;
   background-color: #000000;
 }
 
 #artist-songs {
   width: 100%;
-  background: linear-gradient(180deg, rgba(88, 88, 88, 1) 0%, rgba(88, 88, 88, 1) 25%, rgba(18, 18, 18, 1) 55%);
+  height: 55%;
+  /* overflow: auto; */
+  background: linear-gradient(180deg, rgb(137 137 137) 0%, rgb(47 47 47) 25%, rgb(34 34 34) 55%);
 }
 
 #play-button-row {
   /* background-color: white; */
   height: 100px;
   width: 100%;
+  background-image: linear-gradient(180deg, #7f7f7e, transparent);
+}
+#play-button-row2 {
+  /* background-color: white; */
+  height: 100px;
+  width: 100%;
+}
+
+.list-contents {
+  overflow: auto;
 }
 
 .song-img {
@@ -244,4 +335,211 @@ h2 {
   height: 70px;
   width: 70px;
   background-color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+#album-scroll-container {
+  height: 45vh;
+  /* overflow: auto; */
+}
+
+#album-container {
+  background-image: linear-gradient(180deg, #ffffff03, #e91e6354);
+  padding-block-end: 40px;
+}
+
+#album-to-line {
+  border-bottom: solid 1px gray;
+  width: 200px;
+}
+
+.album-favorites {
+  font-size: 0.9em;
+  overflow: auto;
+  height: 40vh;
+  line-height: 30px;
+}
+.install-container {
+  margin-block-start: 20px;
+}
+
+.install {
+  height: 15px;
+  margin-block-start: 15px;
+}
+
+.artist-page-fitting-img {
+  width: 30px;
+  height: 30px;
+}
+
+.artist-page-ellipsed-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.display-hidden {
+  display: none;
+}
+
+#popular-section {
+  /* overflow: auto; */
+  height: 400px;
+  font-size: 0.9em;
+}
+
+#trackList {
+  overflow: auto;
+  height: 36vh;
+}
+
+.volume {
+  width: 167px;
+  justify-content: space-evenly;
+}
+
+/*-----------------------Login Styling-----------*/
+
+#login-container {
+  background-color: white;
+  height: 100vh;
+}
+.spotify-banner {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.spotify-banner img {
+  height: 9vh;
+  filter: brightness(0);
+}
+
+.login-container {
+  height: 80vh;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.continue-btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-facebook {
+  background-color: #3e5a9a;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-apple {
+  background-color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-facebook:hover,
+.btn-apple:hover {
+  transform: scale(1.01);
+}
+
+.br1 {
+  width: 181px;
+  height: 1px;
+  background-color: lightgray;
+}
+
+.user-input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
+
+.user-input::placeholder {
+  color: lightgray;
+}
+
+.login-area {
+  width: 100%;
+}
+
+.login-checkbox {
+  height: 16px;
+  width: 16px;
+}
+
+.login-btn {
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  width: 190px;
+  background-color: #47b850;
+  color: white;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-btn:hover {
+  transform: scale(1.035);
+}
+
+.forgot-password-text {
+  color: #47b850;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.forgot-password-text:hover {
+  text-decoration: none;
+  color: #47b850;
+  transform: scale(1.05);
+}
+
+.br2 {
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+}
+
+.account {
+  font-weight: bold;
+}
+
+.signup-btn {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.signup-btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.03);
+}
+
+.disclaimer {
+  font-size: 10px;
+  color: lightgray;
+  text-align: center;
+}
+
+.disclaimer-green {
+  color: #47b850;
 }

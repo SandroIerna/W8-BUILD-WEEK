@@ -15,68 +15,80 @@
   </head>
   <body>
     <div class="top-container d-flex">
-      <section class="nav-bar">
+      <section class="navd-bar">
         <nav id="NavBar" class="navbar navbar-dark flex-column align-content-start justify-content-start fixed-top">
-          <div class="d-flex bg-test">
-            <img class="ml-3 my-3" src="./assets/Spotify logo.png" alt="The spotify Logo" />
+          <div class="d-flex bg-test mb-2">
+            <img id="logo" class="ml-3 my-3" src="./icons/Logo/Green.svg" alt="The spotify Logo" />
           </div>
-          <div class="flex-column bg-test">
-            <div class="d-flex align-items-center navbar-selected">
-              <img src="./assets/Vector.png" alt="Home Image" class="ml-3" />
+          <div class="flex-column bg-test mb-3" style="
+          font-size: 0.9em;">
+            <div class="d-flex align-items-center navbar-selected" onclick="goToHome()">
+              <img src="./icons/Menu/Vector.svg" alt="Home Image" class="ml-3" />
               <p class="my-0 mx-3">Home</p>
             </div>
             <div class="d-flex align-items-center navbar-selected">
-              <img src="./assets/Vector (1).png" alt="Search Lens Image" class="ml-3" />
+              <img src="./icons/Menu/search.svg" alt="Search Lens Image" class="ml-3" />
               <p class="my-0 mx-3">Search</p>
             </div>
             <div class="d-flex align-items-center navbar-selected">
-              <img src="./assets/library.png" alt="Library symbol" class="ml-3" />
+              <img src="./icons/Menu/library.svg" alt="Library symbol" class="ml-3" />
               <p class="my-0 mx-3">Your Library</p>
             </div>
           </div>
           <div class="flex-column bg-test">
             <div class="d-flex align-items-center navbar-selected">
               <div class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center">
-                <img src="./assets/Vector (2).png" alt="" />
+                <img src="./icons/Menu/add.svg" alt="" />
               </div>
               <p class="my-0 mx-3">Create PlayList</p>
             </div>
-            <div class="d-flex align-items-center navbar-selected">
+            <div class="d-flex align-items-center navbar-selected mb-3">
               <div id="navbar-liked-songs" class="navbar-icon-square ml-3 d-flex align-items-center justify-content-center">
-                <img src="./assets/Vector (3).png" alt="" />
+                <img src="./icons/Menu/favorite.svg" alt="" />
               </div>
               <p class="my-0 mx-3">Liked Songs</p>
             </div>
           </div>
-          <div class="flex-column bg-test flex-grow-1 overflow-auto">
+          <div id="album-to-line"></div>
+          <div class="album-favorites flex-column bg-test  ">
             <p class="navbar-song-list my-1 ml-3">Funky Heavy Bluesy</p>
             <p class="navbar-song-list my-1 ml-3">Your Top Songs 2020</p>
             <p class="navbar-song-list my-1 ml-3">In Love With You - Erykay...</p>
             <p class="navbar-song-list my-1 ml-3">This Is Rod Stewart</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
-            <p class="navbar-song-list my-1 ml-3">Some casual text here</p>
+            <p class="navbar-song-list my-1 ml-3">Funky Heavy Bluesy</p>
+            <p class="navbar-song-list my-1 ml-3">Your Top Songs 2020</p>
+            <p class="navbar-song-list my-1 ml-3">In Love With You - Erykay...</p>
+            <p class="navbar-song-list my-1 ml-3">This Is Rod Stewart</p>
+            <p class="navbar-song-list my-1 ml-3">Funky Heavy Bluesy</p>
+            <p class="navbar-song-list my-1 ml-3">Your Top Songs 2020</p>
+            <p class="navbar-song-list my-1 ml-3">In Love With You - Erykay...</p>
+            <p class="navbar-song-list my-1 ml-3">This Is Rod Stewart</p>
+            <p class="navbar-song-list my-1 ml-3">Funky Heavy Bluesy</p>
+            <p class="navbar-song-list my-1 ml-3">Your Top Songs 2020</p>
+            <p class="navbar-song-list my-1 ml-3">In Love With You - Erykay...</p>
+            <p class="navbar-song-list my-1 ml-3">This Is Rod Stewart</p>
+          
           </div>
-          <div class="flex-column bg-test navbar-selected">
-            <div class="d-flex align-items-center my-3 align-self-end">
-              <img src="./assets/Vector (4).png" alt="Home Image" class="ml-3" />
+          <div class="install-container flex-column bg-test navbar-selected">
+            <div class="d-flex align-items-center install">
+              <img src="./icons/Menu/download app.svg" alt="Home Image" class="ml-3" />
               <p class="my-0 mx-3">Install App</p>
             </div>
           </div>
         </nav>
       </section>
+      <div class="sidebar-placeholder"></div>
+      <div class="container-fluid scroll">
+        <nav id="profile-top-navbar" class="navbar navbar-expand-lg navbar-light">
+          <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
 
-      <div class="container scroll">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <div class="d-flex" style="width: 410px;;">
             <ul class="navbar-nav back-forward-icon mr-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link back-icon" href="#"> <img src="./icons/back.svg" alt="" /> <span class="sr-only">(current)</span></a>
+                <a class="nav-link back-icon" href="#">
+                  <img src="./icons/back.svg" alt="" />
+                  <span class="sr-only">(current)</span></a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link forward-icon" href="#">
@@ -84,225 +96,71 @@
                 </a>
               </li>
             </ul>
+
+            
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="
+                border-radius: 50px;
+                width: 300px; border: none;">
+                
+              </form>
+            
+          </div>
             <div id="profile-avatar" class="form-inline my-2 my-lg-0">
-              <div id="profile-image"><img src="./icons/profile.png" alt="" /></div>
+              <div id="profile-image">
+                <img src="./icons/profile.png" alt="" />
+              </div>
               <div id="profile-name">Angel</div>
-              <div id="profile-icon"><img src="./icons/drop-down.svg" alt="" /></div>
+              <div id="profile-icon">
+                <img src="./icons/drop-down.svg" alt="" />
+              </div>
             </div>
           </div>
         </nav>
         <h2>Good Morning</h2>
         <div class="row">
-          <div class="col-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
             <div class="top-cards d-flex">
-              <div class="top-card-image-icon"><img src="./icons/heart.svg" alt="" /></div>
+              <div class="top-card-image-icon">
+                <img src="./icons/heart.svg" alt="" />
+              </div>
               <div class="top-card-title"><h5>Liked Songs</h5></div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
             <div class="top-cards d-flex">
-              <div class="top-card-image"><img src="./icons/1.png" alt="" /></div>
+              <div class="top-card-image">
+                <img src="./icons/1.png" alt="" />
+              </div>
               <div class="top-card-title"><h5>Neffex Playlist</h5></div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
             <div class="top-cards d-flex">
-              <div class="top-card-image"><img src="./icons/2.png" alt="" /></div>
+              <div class="top-card-image">
+                <img src="./icons/2.png" alt="" />
+              </div>
               <div class="top-card-title"><h5>K/ DA</h5></div>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
             <div class="top-cards d-flex">
-              <div class="top-card-image"><img src="./icons/4.png" alt="" /></div>
+              <div class="top-card-image">
+                <img src="./icons/4.png" alt="" />
+              </div>
               <div class="top-card-title"><h5>Dance / Electronic Mix</h5></div>
             </div>
           </div>
         </div>
-        <h2>Shows you might like</h2>
 
-        <div class="row">
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img src="./images/1.png" alt="" />
-              <div class="body p-0 my-3">
-                <h6 class="card-title">Weekly Motivation</h6>
-                <p class="card-text">Tie up my hands</p>
-                <p class="card-text">Walking With a Ghost</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="play-on-hover"><img src="./icons/Menu/PlayOnHover.svg" alt=""></div>
+
+        <h2 id="title1">Shows you might like</h2>
+        <div id="album-row" class="row"></div>
+        <h2 id="title2">Music you might like</h2>
+        <div id="artist-row" class="row"></div>
+        <h2 id="title3">Top artists</h2>
+        <div id="artist-row2" class="row mb-4"></div>
     </div>
     <div class="bottom-container d-flex">
       <div class="playing d-flex">
@@ -360,5 +218,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
+    <script src="./home.js"></script>
   </body>
 </html>
