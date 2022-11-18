@@ -155,6 +155,34 @@ const getArtist = async (id) => {
 }
 
 // -------------------------------------- Albums Page Functions --------------------------------------
+let albumRow = document.getElementById("more-artist-row")
+
+const displayAlbumRow = async (data) => {
+  const responseArtist = await fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/search?q=${data}`,
+    options
+  )
+  const dataArtist = await responseArtist.json().data
+  console.log(dataArtist)
+  dataArtist.forEach((album) => {
+    albumRow.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-2 col-xl-2">
+    <div class="card">
+      <div class="play-on-hover">
+        <img src="./icons/Menu/PlayOnHover.svg" alt="" />
+      </div>
+
+      <img
+        src="${album.album.cover}"
+        alt=""
+      />
+      <div class="body p-0 my-3">
+        <h6 class="card-title">${album.album.title}</h6>
+        <p class="card-text">2018</p>
+      </div>
+    </div>
+  </div>`
+  })
+}
 
 let albumInfo = document.getElementById("trackInfo")
 
@@ -234,6 +262,7 @@ const getAlbum = async (id) => {
    </div>
     </li>`
   })
+  displayAlbumRow(data.artist.name)
 }
 
 // ----------------------------------------- search function -----------------------------------------
