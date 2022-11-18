@@ -32,13 +32,15 @@ getSomething = async (artist) => {
     number++;
   });
   artistPickSection.innerHTML = `
-  <h3>Artist pick</h3>
+  <h3 style="font-size: 1.5em;
+  font-weight: 600;">Artist pick</h3>
   <div class="d-flex">
     <img id="artist-pick-img" src="${albumArray[3].album.cover}" alt="" />
     <div class="flex-column ml-3">
-      <div>Posted By ${artist}</div>
-      <div>Best of</div>
-      <div>Playlist</div>
+      <div style="font-size: .7em; color: gray;">Posted By ${artist}</div>
+      <div style="font-size: 1.2em;
+      font-weight: 600;">Best of</div>
+      <div style="font-size: .7em; color: gray;">Playlist</div>
     </div>
   </div>`;
 };
