@@ -37,7 +37,7 @@ const homeDisplayAlbum = async (artist) => {
         <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2">
         <a class="card-link" href="./album.html?albumID=${album.album.id}">
         <div class="card">
-        <div class="play-on-hover"><img src="./icons/Menu/PlayOnHover.svg" alt=""></div>
+        <div class="play-on-hover"><img src="./icons/Menu/PlayOnHover.svg" alt="" onclick="handleSong(${album.album.id},${album.id})"></div>
 
         <img src=${album.album.cover_medium} alt="" />
         <div class="body p-0 my-3">
@@ -203,7 +203,7 @@ const getAlbum = async (id) => {
   trackArray.forEach((track, index) => {
     trackList.innerHTML += `
     <ul id="album-list">
-   <li>
+   <li onclick="handleSong(${track.album.id},${track.id})">
    <div class="d-flex justify-content-between" style="
    line-height: 5px;
 ">
@@ -286,6 +286,7 @@ const handleSong = async (albumID, trackID) => {
   song = filteredArray[0].preview;
   console.log(song);
   audio = new Audio(`${song}`);
+  handlePlaySong();
 };
 
 //----------------------------------------------------------------------------------------------------
