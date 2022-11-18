@@ -99,7 +99,7 @@
 
             
               <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeyup="displaySearch(event) "style="
                 border-radius: 50px;
                 width: 300px; border: none;">
                 
@@ -218,6 +218,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
-    <script src="./home.js"></script>
+    <script >
+homeDisplayAlbum("Katy Perry");
+homeDisplayArtist(homeRandomNumber(), "artist-row");
+homeDisplayArtist(homeRandomNumber(), "artist-row2");
+    </script>
   </body>
 </html>
