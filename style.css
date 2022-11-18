@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
-
+html {
+  height: 100%;
+}
 body {
   position: relative;
   background-image: linear-gradient(
@@ -15,8 +17,10 @@ body {
     #121212 85.45%,
     rgba(18, 18, 18, 1) 100%
   );
-
   font-family: "Work Sans", sans-serif;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #artist-topRec {
@@ -203,6 +207,7 @@ h2 {
 }
 
 .bottom-container {
+  display: flex;
   background-color: #282828;
   height: 100px;
   width: 100%;
@@ -424,15 +429,17 @@ li {
 
 .login-container {
   height: 80vh;
-  max-width: 400px;
+  max-width: 450px;
   margin-inline: auto;
+  justify-content: space-evenly;
+  margin-block-start: 40px;
 }
 
 .continue-btn {
   width: 100%;
-  height: 40px;
+  height: 50px;
   border: none;
-  border-radius: 20px;
+  border-radius: 80px;
   color: white;
   font-size: 14px;
   display: flex;
@@ -462,10 +469,14 @@ li {
 }
 
 .user-input {
-  width: 100%;
-  height: 32px;
-  border: 1px solid lightgray;
-  border-radius: 2px;
+  width: 450px;
+  height: 52px;
+  border: 1px solid #8e8a8a;
+  border-radius: 5px;
+  padding-inline-start: 19px;
+  background-color: #94b3ff24;
+  color: black;
+  outline-color: black;
 }
 
 .user-input::placeholder {
@@ -483,8 +494,8 @@ li {
 
 .login-btn {
   border: none;
-  border-radius: 20px;
-  height: 40px;
+  border-radius: 50px;
+  height: 50px;
   width: 190px;
   background-color: #47b850;
   color: white;
@@ -520,10 +531,10 @@ li {
 
 .signup-btn {
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: white;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 50px;
   font-size: 14px;
   transition: all 0.2s ease-in-out;
 }
@@ -542,4 +553,31 @@ li {
 
 .disclaimer-green {
   color: #47b850;
+}
+
+@media (max-width: 1250px) {
+  #NavBar {
+    display: none;
+  }
+
+  .bottom-container {
+    display: none;
+  }
+  .sidebar-placeholder {
+    min-width: 0;
+  }
+
+  h2 {
+    color: white;
+    margin-block: 35px 25px;
+    font-size: 1.3em;
+  }
+
+  .top {
+    width: 50%;
+  }
+
+  .scroll {
+    height: 200vh;
+  }
 }
