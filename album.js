@@ -12,7 +12,7 @@ getAlbum = async (id) => {
   albumInfo.innerHTML = `
   <div class="album-card ml-2 mt-4" style="width: 18rem;box-shadow: 0px 0px 42px 0px rgba(0,0,0,0.57);">
       <img
-        src="${data.cover}"
+        src="${data.cover_medium}"
         class="card-img-top"
         alt="album-image"
       />

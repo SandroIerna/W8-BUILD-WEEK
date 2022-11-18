@@ -33,7 +33,7 @@ body {
   min-width: 270px;
 }
 .scroll {
-  height: 160vh;
+  height: 165vh;
 }
 .container {
   /* max-width: 1500px; */
@@ -100,13 +100,11 @@ h2 {
 }
 .top-cards {
   background-color: #303030;
-  height: 10vh;
-  width: 300px;
   align-items: center;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  height: 90px;
+  height: 80px;
 }
 
 .top-card-image-icon {
@@ -123,8 +121,12 @@ h2 {
   width: 30px;
 }
 .top-card-title h5 {
-  margin-inline-start: 20px;
+  margin-inline-start: 10px;
   margin-bottom: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
 }
 .top-card-title {
   position: absolute;
@@ -239,6 +241,7 @@ h2 {
 }
 .player-icons {
   width: 250px;
+  justify-content: space-evenly;
 }
 
 #NavBar {
@@ -290,10 +293,6 @@ h2 {
 #artist-img {
   height: 35%;
   min-height: 300px;
-  /* background-attachment: fixed; */
-  background-position: center;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
 }
 
@@ -396,6 +395,11 @@ li {
 #trackList {
   overflow: auto;
   height: 36vh;
+}
+
+.volume {
+  width: 167px;
+  justify-content: space-evenly;
 }
 
 /*-----------------------Login Styling-----------*/

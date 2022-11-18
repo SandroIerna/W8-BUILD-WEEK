@@ -13,13 +13,15 @@ const homeDisplayAlbum = async (artist) => {
       //   console.log(album.artist.name);
 
       const homeAlbumRow = document.querySelector("#album-row");
+      const homeAlbumTitle = document.querySelector("#title1");
+      homeAlbumTitle.textContent = `Best of ${album.artist.name}`;
       homeAlbumRow.innerHTML += ` 
-        <div class="col-2">
+        <div class="col-sm-6 col-md-4 col-lg-2 col-xl-2">
         <a class="card-link" href="./album.html?albumID=${album.album.id}">
         <div class="card">
         <div class="play-on-hover"><img src="./icons/Menu/PlayOnHover.svg" alt=""></div>
 
-        <img src=${album.album.cover} alt="" />
+        <img src=${album.album.cover_medium} alt="" />
         <div class="body p-0 my-3">
         <h6 class="card-title">${album.album.title}</h6>
         <p class="card-text">${album.artist.name}</p>
@@ -40,11 +42,11 @@ const homeDisplayArtist = async (id, idName) => {
     // console.log(artists);
 
     const homeArtistRow = document.querySelector(`#${idName}`);
-    homeArtistRow.innerHTML += `<div class="col-2">
+    homeArtistRow.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-2 col-xl-2">
       <a class="card-link" href="./artist.html?artistID=${artists.id}">
        <div id="artist-round" class="card">
        <div class="play-on-hover2"><img src="./icons/Menu/PlayOnHover.svg" alt=""></div>
-      <img src=${artists.picture} alt="" />
+      <img src=${artists.picture_medium} alt="" />
       <div class="body p-0 my-3">
       <h6 class="card-title">${artists.name}</h6>
       <p class="card-text">${artists.type}</p>
@@ -62,6 +64,6 @@ const homeDisplayArtist = async (id, idName) => {
 
 const homeRandomNumber = () => Math.floor(Math.random() * 200);
 
-homeDisplayAlbum("eminem");
+homeDisplayAlbum("Katy Perry");
 homeDisplayArtist(homeRandomNumber(), "artist-row");
 homeDisplayArtist(homeRandomNumber(), "artist-row2");
