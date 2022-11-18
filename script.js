@@ -264,12 +264,15 @@ let displaySearch = function () {
 
 // -------------------------------------------- mp3player --------------------------------------------
 
+let playButton = document.getElementById("play-button-js");
 const handlePlaySong = async (audio) => {
   console.log(audio);
   if (audio.paused) {
     audio.play();
+    playButton.src = "./icons/pause.svg";
   } else {
     audio.pause();
+    playButton.src = "./icons/play.svg";
   }
 };
 
