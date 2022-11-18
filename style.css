@@ -33,7 +33,7 @@ body {
   min-width: 270px;
 }
 .scroll {
-  height: 170vh;
+  height: 160vh;
 }
 .container {
   /* max-width: 1500px; */
@@ -56,7 +56,7 @@ body {
 
 h2 {
   color: white;
-  margin-block-start: 65px;
+  margin-block: 35px 25px;
 }
 
 #profile-avatar {
@@ -135,16 +135,53 @@ h2 {
 }
 
 .card {
-  padding: 10px;
-  background-color: #181818;
-  border-radius: 5px;
+  padding: 13px;
+  background-color: #232222;
+  border-radius: 8px;
   color: white;
   cursor: pointer;
   transition: 1s;
 }
+
+.card img:nth-child(2) {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px -3px black;
+}
+.play-on-hover {
+  position: absolute;
+  bottom: 35%;
+  right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.play-on-hover2 {
+  position: absolute;
+  bottom: 25%;
+  right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#artist-round img:nth-child(2) {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px -3px black;
+}
 .card:hover {
-  background-color: #363636;
+  background-color: #3d3d3d;
   transition: 1s;
+}
+.card:hover img {
+  box-shadow: 0px 0px 0px 0px black;
+}
+.card:hover .play-on-hover {
+  bottom: 40%;
+  opacity: 1;
+  transition: 0.5s;
+}
+.card:hover .play-on-hover2 {
+  bottom: 32%;
+  opacity: 1;
+  transition: 0.5s;
 }
 .card-title {
   color: white;
