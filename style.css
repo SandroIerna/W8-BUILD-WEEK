@@ -206,11 +206,12 @@ h2 {
 
 #NavBar {
   width: 256px;
-  height: 89.3vh;
+  height: 100vh;
   left: 0px;
   top: 0px;
   background-color: #000000;
   flex-shrink: 0;
+  z-index: 0;
 }
 
 .bg-test {
@@ -254,8 +255,8 @@ h2 {
   min-height: 300px;
   /* background-attachment: fixed; */
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
 }
 
@@ -312,6 +313,26 @@ li {
 #album-container {
   background-image: linear-gradient(180deg, #ffffff03, #e91e6354);
   padding-block-end: 40px;
+}
+
+#album-to-line {
+  border-bottom: solid 1px gray;
+  width: 200px;
+}
+
+.album-favorites {
+  font-size: 0.9em;
+  overflow: auto;
+  height: 40vh;
+  line-height: 30px;
+}
+.install-container {
+  margin-block-start: 20px;
+}
+
+.install {
+  height: 15px;
+  margin-block-start: 15px;
 }
 
 .artist-page-fitting-img {
